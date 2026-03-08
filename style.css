@@ -1,0 +1,148 @@
+/* COLOR SCHEME */
+:root{
+    --base-color:#f5f7fa;     /* background */
+    --contrast-color:#222;    /* text */
+    --accent-color:#4f46e5;   /* buttons / highlights */
+}
+
+/* GLOBAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:var(--base-color);
+    color:var(--contrast-color);
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:white;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-weight:bold;
+    font-size:20px;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--contrast-color);
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:var(--accent-color);
+}
+
+/* HOME PAGE */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 10%;
+    gap:40px;
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+}
+
+.hero img{
+    width:400px;
+    border-radius:10px;
+}
+
+/* ABOUT PAGE */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:60px 10%;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* CONTACT PAGE */
+
+.contact{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:120px 20px;
+    text-align:center;
+}
+
+.contact h1{
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.contact ul{
+    list-style:none;
+}
+
+.contact li{
+    margin:10px 0;
+}
+
+.contact a{
+    color:var(--accent-color);
+    text-decoration:none;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width:768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero img{
+    width:100%;
+    max-width:350px;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+
+}
